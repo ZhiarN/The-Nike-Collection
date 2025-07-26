@@ -1,8 +1,18 @@
 body,
 html {
+    height: 100%;
     font-family: Roboto, sans-serif;
     font-size: 16px;
     overflow-x: hidden;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 header {
@@ -100,27 +110,46 @@ h1 {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     padding: 0.2rem;
     width: 100%;
     font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     nav {
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
     }
 
+    .nav-left,
+    .nav-right {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+header li {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0rem;
+}
+
     .logo {
-        width: 6rem;
+        margin: 1rem auto;
+        display: block;
+        width: 3rem;
         height: auto;
     }
 
     h1 {
         font-size: 2rem;
         margin-bottom: -4rem;
+    }
+    footer {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+        text-align: center;
+        margin-top: 2rem;
     }
 }
