@@ -4,6 +4,7 @@ html {
     font-family: Roboto, sans-serif;
     font-size: 16px;
     overflow-x: hidden;
+    
 }
 body {
     min-height: 100vh;
@@ -20,6 +21,9 @@ footer,
 
 main {
     flex: 1;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -115,6 +119,8 @@ h1 {
     letter-spacing: 0.1rem;
     transition: all 0.3s ease-in-out;
 }
+
+
 
 footer {
     padding: 0.2rem;
